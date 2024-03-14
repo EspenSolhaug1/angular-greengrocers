@@ -1,0 +1,13 @@
+<div>
+  <button (click)="filterItems('vegetable')">Vegetables</button>
+  <button (click)="filterItems('fruit')">Fruits</button>
+  <button (click)="filterItems('all')">Reset</button>
+</div>
+<div>
+  <button (click)="filterItems('name')">Name</button>
+  <button (click)="filterItems('price')">Price</button>
+</div>
+<menu></menu>
+<ul class="item-list store--item-list">
+  <app-item *ngFor="let item of displayedItems" [item]="item"></app-item>
+</ul>
